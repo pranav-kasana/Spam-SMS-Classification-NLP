@@ -12,11 +12,6 @@ This project focuses on classifying SMS messages as either "ham" (non-spam) or "
 3. **Modeling**: Training models like Naive Bayes, SVM, etc., and evaluating performance.
 4. **Evaluation**: Assessing model accuracy, precision, recall, and F1-score.
 
-## How to Run
-1. Clone the repository.
-2. Install dependencies using `pip install -r requirements.txt`.
-3. Run the notebook or script to train and evaluate the model.
-
 ## Results
 - Best model: Naive Bayes
 - Accuracy: 98%
