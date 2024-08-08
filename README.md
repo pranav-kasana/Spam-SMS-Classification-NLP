@@ -21,8 +21,5 @@ This project focuses on classifying SMS messages as either "ham" (non-spam) or "
 - Best model: Naive Bayes
 - Accuracy: 98%
 
-## Acknowledgments
-Thanks to the Kaggle community and the dataset providers.
-
 ## License
 This project is licensed under the MIT License.
