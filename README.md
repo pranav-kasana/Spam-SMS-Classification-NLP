@@ -47,58 +47,58 @@ The dataset is loaded into a Pandas DataFrame using the `pd.read_csv()` function
 ## Exploratory Data Analysis (EDA)
 Exploratory Data Analysis is conducted to gain insights into the dataset's characteristics.
 
-### Exploring NaN Values
+- ### Exploring NaN Values
 The project checks for any missing values in the dataset using `isnull().sum()`. This step is crucial as missing values can adversely affect model training. If any NaN values are found, appropriate measures are taken, such as dropping those rows or imputing values.
 
-### Class Distribution
+- ### Class Distribution
 Countplots are generated using Seaborn's `countplot()` function to visualize the distribution of spam and ham messages. This visualization helps identify any class imbalance, which is important for selecting appropriate modeling techniques.
 
 ## Feature Engineering
 Feature engineering involves creating new features or transforming existing ones to improve model performance.
 
-### Handling Imbalanced Datasets
+- ### Handling Imbalanced Datasets
 Class imbalance is a common issue in spam detection, where the number of ham messages significantly outweighs spam messages. To address this, techniques such as oversampling the minority class (spam) are applied. The project employs the SMOTE (Synthetic Minority Over-sampling Technique) algorithm to generate synthetic samples for the spam class, thereby balancing the dataset.
 
-### Creating New Features
+- ### Creating New Features
 New features are created based on the content of the SMS messages. For instance, a feature called `word_count` is introduced, which calculates the number of words in each message. This feature can provide additional context for the model.
 
-## Data Cleaning
+- ## Data Cleaning
 Data cleaning is essential for preparing the SMS messages for analysis and modeling.
 
-### Removing Special Characters and Numbers
+- ### Removing Special Characters and Numbers
 Special characters and numbers are removed from the SMS messages using regular expressions. This step ensures that the model focuses on the relevant textual content.
 
-### Converting Messages to Lowercase
+- ### Converting Messages to Lowercase
 All SMS messages are converted to lowercase to maintain consistency. This prevents the model from treating the same words in different cases as distinct entities.
 
-### Tokenization
+- ### Tokenization
 The cleaned SMS messages are tokenized into individual words using the `word_tokenize()` function from NLTK. Tokenization breaks down the text into manageable pieces for further processing.
 
-### Removing Stop Words
+- ### Removing Stop Words
 Stop words, which are common words that do not add significant meaning (e.g., "and," "the," "is"), are removed using NLTK's stopwords corpus. This step helps reduce noise in the data.
 
-### Lemmatization
+- ### Lemmatization
 Lemmatization is applied to convert words to their base or root form using the `WordNetLemmatizer` from NLTK. For example, "running" becomes "run." This process helps reduce the dimensionality of the feature space.
 
-### Joining Lemmatized Words
+- ### Joining Lemmatized Words
 After lemmatization, the lemmatized words are joined back into a single string using the `join()` function. This results in a cleaned and processed corpus of SMS messages ready for modeling.
 
-## Building a Corpus
+- ### Building a Corpus
 A corpus of cleaned and preprocessed messages is constructed, ready for model training.
 
 ## Model Building and Evaluation
 The project builds and evaluates several machine learning models for SMS classification.
 
-### Multinomial Naive Bayes
+- ### Multinomial Naive Bayes
 The Multinomial Naive Bayes model is trained on the preprocessed SMS messages. This model is particularly effective for text classification tasks. The performance is evaluated using the F1-score, which for this model is calculated to be **0.943**.
 
-### Decision Tree
+- ### Decision Tree
 A Decision Tree model is also trained on the dataset. Decision Trees are intuitive and easy to interpret. The F1-score for the Decision Tree model is **0.98**, indicating strong performance.
 
-### Random Forest (Ensemble)
+- ### Random Forest (Ensemble)
 The Random Forest model is an ensemble method that combines multiple Decision Trees to improve accuracy and robustness. The Random Forest model achieves an impressive F1-score of **0.994**, showcasing its effectiveness in handling the classification task.
 
-### Voting Classifier
+- ### Voting Classifier
 A Voting Classifier is created by combining the predictions of the Multinomial Naive Bayes and Random Forest models. This ensemble approach leverages the strengths of both models, leading to improved classification performance.
 
 ## Making Predictions
@@ -106,6 +106,7 @@ Once the models are trained and evaluated, they can be utilized to make predicti
 
 ## Conclusion
 The SMS Spam Classification project successfully demonstrates the application of NLP techniques and machine learning algorithms for text classification. Through thorough data preprocessing, feature engineering, and model evaluation, the project achieves high F1-scores, indicating effective classification of SMS messages. The methodologies employed in this project can serve as a foundation for further research and improvements in spam detection systems. This documentation provides a comprehensive overview of the SMS Spam Classification project, detailing each step of the process from data loading to model evaluation and prediction. It serves as a reference for understanding the techniques and methodologies used in the project.
+
 
 ## License
 This project is licensed under the MIT License.
