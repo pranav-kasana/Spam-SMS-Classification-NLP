@@ -19,7 +19,7 @@ The SMS Spam Classification project aims to develop a machine learning model cap
   - [Removing Stop Words](#removing-stop-words)
   - [Lemmatization](#lemmatization)
   - [Joining Lemmatized Words](#joining-lemmatized-words)
-- [Building a Corpus](#building-a-corpus)
+  - [Building a Corpus](#building-a-corpus)
 - [Model Building and Evaluation](#model-building-and-evaluation)
   - [Multinomial Naive Bayes](#multinomial-naive-bayes)
   - [Decision Tree](#decision-tree)
